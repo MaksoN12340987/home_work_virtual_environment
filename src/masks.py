@@ -21,7 +21,7 @@ def get_mask_card_number(card_number: [int] = None) -> [str]:
 
 def get_mask_account(bank_account: [int] = None) -> [str]:
     """принимает на вход номер счета в виде числа и возвращает маску номера по правилу **XXXX"""
-    number_to_string = str(card_number)
+    number_to_string = str(bank_account)
     out_format = ""
 
     for i in range(len(number_to_string)):
