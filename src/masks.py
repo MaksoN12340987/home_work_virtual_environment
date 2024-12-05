@@ -3,11 +3,11 @@ def get_mask_card_number(card_number: [str] = None, start=0) -> [str]:
     """принимает на вход номер карты, индекс первой цыфры номера карты и возвращает маску номера 
        по правилу User Name XXXX XX** **** XXXX"""
     out_format = card_number[:start]
-    split = start + 4
-    temp = range(start+7, start+13)
+    split = start + 3
+    temp = range(start+6, start+12)
 
     for i in range(len(card_number)):
-        if i > start:
+        if i >= start:
             if i in temp:
                 out_format += "*"
                 if i == split:
