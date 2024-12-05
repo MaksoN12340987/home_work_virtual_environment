@@ -1,10 +1,10 @@
 # Functional part
-def get_mask_card_number(card_number: [str] = None, start=0) -> [str]:
-    """принимает на вход номер карты, индекс первой цыфры номера карты и возвращает маску номера 
+def get_mask_card_number(card_number: str = "", start: int = 0) -> str:
+    """принимает на вход номер карты, индекс первой цыфры номера карты и возвращает маску номера
        по правилу User Name XXXX XX** **** XXXX"""
     out_format = card_number[:start]
     split = start + 3
-    temp = range(start+6, start+12)
+    temp = range(start + 6, start + 12)
 
     for i in range(len(card_number)):
         if i >= start:
@@ -21,7 +21,7 @@ def get_mask_card_number(card_number: [str] = None, start=0) -> [str]:
     return out_format
 
 
-def get_mask_account(bank_account: [str] = None, start=0) -> [str]:
+def get_mask_account(bank_account: str = "", start: int = 0) -> str:
     """принимает на вход номер счета и возвращает маску номера по правилу Name **XXXX"""
     out_format = ""
 
