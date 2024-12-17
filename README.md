@@ -14,12 +14,6 @@
 "Visa Platinum 7000 79** **** 6361"
 "Счет **4305"
 
-## В разработке
-
-В разработке находится функця filter_by_state, которая принимает список словарей и опционально значение для ключа **state** (по умолчанию 'EXECUTED'). Функция возвращает новый список словарей, содержащий только те словари, у которых ключ **state**
- соответствует указанному значению.
-
-Она будет располагаться в пакете src и вызываться в модуле main 
 
 # Homework project on the implementation of functionality for working with bank data
 
@@ -36,11 +30,3 @@ In the widget.py module, the mask_account_card function is created, which accept
 *Output format:*
 "Visa Platinum 7000 79** **** 6361"
 "Account **4305"
-
-## In development
-
-A filter_by_state function is in development, which takes a list of dictionaries and optionally a value for the **state** key (default 'EXECUTED'). The function returns a new list of dictionaries containing only those dictionaries whose **state** key
-
-matches the specified value.
-
-It will be located in the src package and called in the main module
