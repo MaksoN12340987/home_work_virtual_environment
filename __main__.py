@@ -1,4 +1,4 @@
-import src.processing, src.widget
+import src.widget, src.processing
 
 if __name__ == "__main__":
     test_1 = "Visa Platinum 7000792289606361"
