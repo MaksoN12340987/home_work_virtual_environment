@@ -1,16 +1,22 @@
 import pytest
+import sys
+import os
 
-import __main__.py
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 
-@pytest.fixture()
+import src.widget, src.processing
+
+@pytest.fixture
 def card_number():
     return "Visa Platinum 7000792289606361"
 
-@pytest.fixture()
+@pytest.fixture
 def account_number():
     return "Счет 73654108430135874305"
 
-@pytest.fixture()
+@pytest.fixture
 def list_data_bank_operation():
     return [
         {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
@@ -19,3 +25,6 @@ def list_data_bank_operation():
         {"id": 615064591, "state": "CANCELED", "date": "2018-10-13T08:21:33.419441"},
         {"id": 615064591, "state": "CANCELED", "date": "2018-10-13T08:20:00.419441"}
     ]
+
+
+assert src.widget.mask_account_card(card_number) == "Visa Platinum 7000 79** **** 6361"
